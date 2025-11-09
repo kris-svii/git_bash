@@ -1,0 +1,51 @@
+Last login: Sun Nov  9 18:44:00 on ttys000
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+
+krissvi@krissvis-MacBook-Pro ~ % cd ~
+krissvi@krissvis-MacBook-Pro ~ % pwd
+/Users/krissvi
+krissvi@krissvis-MacBook-Pro ~ % mkdir test1
+krissvi@krissvis-MacBook-Pro ~ % cd test1
+krissvi@krissvis-MacBook-Pro test1 % touch 1 2 3
+krissvi@krissvis-MacBook-Pro test1 % ls -la
+total 0
+drwxr-xr-x   5 krissvi  staff   160 Nov  9 18:47 .
+drwxr-x---+ 36 krissvi  staff  1152 Nov  9 18:47 ..
+-rw-r--r--   1 krissvi  staff     0 Nov  9 18:47 1
+-rw-r--r--   1 krissvi  staff     0 Nov  9 18:47 2
+-rw-r--r--   1 krissvi  staff     0 Nov  9 18:47 3
+krissvi@krissvis-MacBook-Pro test1 % cd ~
+
+krissvi@krissvis-MacBook-Pro ~ % mkdir test2
+krissvi@krissvis-MacBook-Pro ~ % rmdir test2
+krissvi@krissvis-MacBook-Pro ~ % rm test1/2
+krissvi@krissvis-MacBook-Pro ~ % mkdir test3
+touch test3/file1 test3/file2
+krissvi@krissvis-MacBook-Pro ~ % rm -r test3
+
+krissvi@krissvis-MacBook-Pro ~ % mkdir test4
+krissvi@krissvis-MacBook-Pro ~ % mv test1/1 test1/3 test4/
+krissvi@krissvis-MacBook-Pro ~ % echo "line" >> test4/1
+echo "line" >> test4/1
+echo "line" >> test4/1
+krissvi@krissvis-MacBook-Pro ~ % cat test4/1
+line
+line
+line
+krissvi@krissvis-MacBook-Pro ~ % echo "line" >> test4/3
+echo "line" >> test4/3
+echo "line" >> test4/3
+krissvi@krissvis-MacBook-Pro ~ % cat test4/1 test4/3
+line
+line
+line
+line
+line
+line
+krissvi@krissvis-MacBook-Pro ~ % sed -i 's/.*/new line/g' test4/1
+sed: 1: "test4/1": undefined label 'est4/1'
+krissvi@krissvis-MacBook-Pro ~ % echo "new line" > test4/1
+echo "new line" >> test4/1
+echo "new line" >> test4/1
+krissvi@krissvis-MacBook-Pro ~ % 
